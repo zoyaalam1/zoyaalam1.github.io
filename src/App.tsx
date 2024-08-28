@@ -1,13 +1,12 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import './App.css'
 
-export default function App() {
+function App() {
+
   return (
-    <Container sx={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Typography sx={{ mb: 2, color: 'text.secondary' }}>
-        Master Shani is at work ༼ つ ◕_◕ ༽つ
-      </Typography>
-    </Container>
-  );
+    <div className="flex flex-1 h-screen justify-center items-center bg-blue-300">
+      <span>Master shani is at work :)</span>
+    </div>
+  )
 }
+
+export default App
