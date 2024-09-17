@@ -1,39 +1,39 @@
 import { Box, Flex, HStack, IconButton, Stack, useDisclosure, } from '@chakra-ui/react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: React.ReactNode
 }
 
-type NavLinkItem = { name: string; link: string };
+type NavLinkItem = { name: string; to: string };
 
 const Links: NavLinkItem[] = [
   {
     name: 'Home',
-    link: '/'
+    to: '/'
   },
   {
     name: 'Projects',
-    link: '/projects'
+    to: '/projects'
   },
   {
     name: 'About',
-    link: '/about'
+    to: '/about'
   }
 ];
 
 const NavLink = (props: NavLinkItem) => {
-
   return (
     <Box
-      as="a"
+      as={Link}
       px={ 2 }
       py={ 1 }
       rounded={ 'md' }
       className="text-tertiary font-bold"
-      href={ props.link }>
-      { props.name }
+      to={props.to}>
+      {props.name}
     </Box>
   )
 }
@@ -56,7 +56,7 @@ const CoreLayout = (props: Props) => {
           <HStack spacing={ 8 } alignItems={ 'center' }>
             <HStack as={ 'nav' } spacing={ 4 } display={ { base: 'none', md: 'flex' } }>
               { Links.map((link) => (
-                <NavLink key={ link.link } { ...link } />
+                <NavLink key={ link.to } { ...link } />
               )) }
             </HStack>
           </HStack>
@@ -66,7 +66,7 @@ const CoreLayout = (props: Props) => {
           <Box pb={ 4 } display={ { md: 'none' } }>
             <Stack as={ 'nav' } spacing={ 4 }>
               { Links.map((link) => (
-                <NavLink key={ link.link } { ...link } />
+                <NavLink key={ link.to } { ...link } />
               )) }
             </Stack>
           </Box>

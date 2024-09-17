@@ -22,11 +22,12 @@ function Home() {
         />
         <Box position="relative" zIndex={ 1 }>
           <h1
-            className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-widest text-center text-secondary">Architect
-            Zoya
-            Alam</h1>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl text-secondary opacity-80 text-center">Architectural Design &
-            Consultancy</h3>
+            className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-widest text-center text-secondary">
+            Architect Zoya Alam
+          </h1>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-secondary opacity-80 text-center">
+            Architectural Design & Consultancy
+          </h3>
         </Box>
       </Flex>
     </ CoreLayout>
