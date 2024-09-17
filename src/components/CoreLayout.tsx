@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, IconButton, Stack, useColorModeValue, useDisclosure, } from '@chakra-ui/react'
+import { Box, Flex, HStack, IconButton, Stack, useDisclosure, } from '@chakra-ui/react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import React from 'react';
 
@@ -31,10 +31,7 @@ const NavLink = (props: NavLinkItem) => {
       px={ 2 }
       py={ 1 }
       rounded={ 'md' }
-      _hover={ {
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
-      } }
+      className="text-tertiary font-bold"
       href={ props.link }>
       { props.name }
     </Box>
@@ -47,7 +44,7 @@ const CoreLayout = (props: Props) => {
 
   return (
     <Flex direction="column" height="100vh">
-      <Box bg={ useColorModeValue('gray.100', 'gray.900') } px={ 4 }>
+      <Box className="bg-primary" px={ 4 }>
         <Flex h={ 16 } alignItems={ 'center' } justifyContent={ 'space-between' }>
           <IconButton
             size={ 'md' }
@@ -76,7 +73,7 @@ const CoreLayout = (props: Props) => {
         ) : null }
       </Box>
 
-      <Flex direction="column" flex="1" minHeight="calc(100vh - 4rem)" overflow="auto">
+      <Flex direction="column" className="bg-tertiary relative" flex="1" minHeight="calc(100vh - 4rem)" overflow="auto">
         { children }
       </Flex>
     </Flex>

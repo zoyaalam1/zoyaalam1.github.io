@@ -1,7 +1,7 @@
 import '../App.css'
 import CoreLayout from './CoreLayout.tsx';
 import { Box, Flex } from '@chakra-ui/react';
-import BackgroundImg from '../assets/1920-1080.png';
+import BackgroundImg from '../assets/background.png';
 
 function Home() {
 
@@ -17,15 +17,15 @@ function Home() {
           bgImage={ `url(${ BackgroundImg })` }
           bgSize="cover"
           bgPosition="center"
-          opacity={ 0.2 }
-          zIndex={ -1 }
+          opacity={ 0.1 }
+          zIndex={ 0 }
         />
-        <Box>
+        <Box position="relative" zIndex={ 1 }>
           <h1
-            className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-widest text-center text-slate-600">Architect
+            className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-widest text-center text-secondary">Architect
             Zoya
             Alam</h1>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl text-slate-600 text-center">Architectural Design &
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-secondary opacity-80 text-center">Architectural Design &
             Consultancy</h3>
         </Box>
       </Flex>
