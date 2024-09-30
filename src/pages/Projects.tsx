@@ -1,7 +1,7 @@
 import React from 'react';
 import CoreLayout from '../components/CoreLayout.tsx';
 import ProjectTile, { ProjectTileProps } from '../components/ProjectTile.tsx';
-import takashaCity from '../assets/thumbnails/takasha-city.png';
+import takshaCity from '../assets/thumbnails/takasha-city.png';
 import sarkarE from '../assets/thumbnails/sarkar-e.png';
 import sehatQuarters from '../assets/thumbnails/sehat-quarters.jpg';
 import floodResilientDwelling from '../assets/thumbnails/flood-resilient-dwelling.png';
@@ -10,10 +10,10 @@ import otherWorks from '../assets/thumbnails/other-works.png';
 
 const projects: ProjectTileProps[] = [
   {
-    title: 'Takasha City',
+    title: 'Taksha City',
     description: 'Immersive',
-    image: takashaCity,
-    link: '/project-takasha-city'
+    image: takshaCity,
+    link: '/project-taksha-city'
   },
   {
     title: 'Sarkar-e',
@@ -55,6 +55,7 @@ const Projects: React.FC = () => {
           <div
             className="flex flex-1 w-full flex-row items-center justify-evenly flex-wrap gap-4 md:gap-6 lg:gap-10 h-fit">
             { projects.map((project, index) => <ProjectTile key={ index } { ...project } />) }
+            <div className='p-4 flex md:display-none'></div>
           </div>
         </div>
       </div>

@@ -4,8 +4,9 @@ import Home from './components/Home.tsx'
 import './index.css'
 import { ChakraProvider } from '@chakra-ui/react';
 import { createHashRouter, RouterProvider, } from "react-router-dom";
-import ErrorPage from './pages/error.tsx';
-import Projects from './pages/projects.tsx';
+import ErrorPage from './pages/Error.tsx';
+import Projects from './pages/Projects.tsx';
+import ProjectTakshaCity from './pages/ProjectTakshaCity.tsx';
 
 const router = createHashRouter([
   {
@@ -16,6 +17,11 @@ const router = createHashRouter([
   {
     path: '/projects',
     element: <Projects/>,
+    errorElement: <ErrorPage/>,
+  },
+  {
+    path: '/project-taksha-city',
+    element: <ProjectTakshaCity/>,
     errorElement: <ErrorPage/>,
   }
 ], {
